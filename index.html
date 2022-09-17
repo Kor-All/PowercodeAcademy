@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -8,8 +9,11 @@
         href="https://fonts.googleapis.com/css2?family=Edu+QLD+Beginner:wght@400;700&family=Oswald:wght@500&family=Roboto:wght@400;500;700;900&display=swap"
         rel="stylesheet"
         />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
         
-        <script src="./script.js"></script>
+        
+        <script src="script.js"></script>
+        
         <title>Home page</title>
     </head>
     <body>
@@ -41,28 +45,52 @@
         </div>
     </header>
 
+    
       <!-- MAIN BANNNER -->
       <div id="main-banner">
-        <div id="text-group">
-          <div id="text-group-1">Курси від провідних IT спеціалістів</div>
-          <div id="text-group-2">Powercode Academy</div>
-          <div id="text-group-buttons">
-            <a href="#openModal">
-                <button id="text-group-signUp-button">Записатися</button>
-            </a>
+          <div id="text-group">
+              <div id="text-group-1">Курси від провідних IT спеціалістів</div>
+              <div id="text-group-2">Powercode Academy</div>
+              <div id="text-group-buttons">
+                  <a href="#openModal">
+                      <button id="text-group-signUp-button">Записатися</button>
+                    </a>
+                    <div id="video-buttons">
+                        <button id="text-group-video-button">ДИВИТИСЬ ВІДЕО</button>
+                        <div id="play-image">
+                            <img id="group102" src="assets/main-banner/Group 102.svg" />
+                            <img id="play" src="assets/main-banner/play.svg" />
+                        </div>
+                    </div>
             
-            <!-- TODO:// PLAYING VIDEO -->
+              </div>
             
-               <button id="text-group-video-button">ДИВИТИСЬ ВІДЕО</button>
-            <div id="play-image">
-              <img id="group102" src="assets/main-banner/Group 102.svg" />
-              <img id="play" src="assets/main-banner/play.svg" />
             </div>
-          </div>
+                    <script>  
+                        let button = document.getElementById('text-group-video-button');
+                        document.getElementById('video-buttons').addEventListener('click', function (e) {
+                         let div = document.getElementById('fluid-yt')
+                         let img = document.getElementById('img-group')
+                         div.style.display = div.style.display === 'none' ? 'block' : 'none'
+                         img.style.display = img.style.display === 'none' ? 'block' : 'none'
+                         button.innerHTML= button.innerHTML === "ДИВИТИСЬ ВІДЕО" ? "ЗАКРИТИ ВІДЕО" : "ДИВИТИСЬ ВІДЕО"
+                         
+                     })
+                     </script>
+            <!-- IFRAME -->
+                <div id="fluid-yt" style="display: none">
+                    <iframe width="640" height="480"`
+                        src="https://www.youtube.com/watch?v=am3riwYbG3s"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+            </div>
+        <img id="img-group" src="assets/main-banner/img-group.png" style="display: block"/>
         </div>
-        <img id="img-group" src="assets/main-banner/img-group.png" />
-    </div>
-
+    
+        
       <!-- COURSES -->
       <!-- TODO:// IMAGES -->
       <div class="courses">
@@ -95,86 +123,78 @@
         >
           <div
             class="card"
-            style="background-image: url('./images/Group92.png')"
+            style="background-image: url('assets/courses/Group92.png')"
           >
             <div class="text1">
               31.01. | 12 уроків <br />
               усього місць : 18
             </div>
             <div class="text2">{FRONT-END}</div>
-            <!-- <img class="bg_image" src="./images/Group92.png" alt="">                     -->
           </div>
           <div
             class="card"
-            style="background-image: url('./images/Group93.png')"
+            style="background-image: url('assets/courses/Group93.png')"
           >
             <div class="text1">
               30.01. | 14 уроків <br />
               усього місць : 12
             </div>
             <div class="text2">{IT PROJECT MANAGEMENT}</div>
-            <!-- <img class="bg_image" src="./images/Group93.png" alt=""> -->
           </div>
           <div
             class="card"
-            style="background-image: url('./images/Group94.png')"
+            style="background-image: url('assets/courses/Group94.png')"
           >
             <div class="text1">
               01.02. | 11 уроків <br />
               усього місць : 19
             </div>
             <div class="text2">{UX/UI WEB-DESIGN}</div>
-            <!-- <img class="bg_image" src="./images/Group94.png" alt=""> -->
           </div>
-          <div class="card" style="background-image: url('./images/Group.png')">
+          <div class="card" style="background-image: url('assets/courses/Group.png')">
             <div class="text1">
               31.01. | 12 уроків <br />
               усього місць : 10
             </div>
             <div class="text2">{FRONT-END ADVANCED}</div>
-            <!-- <img class="bg_image" src="./images/Group.png" alt=""> -->
           </div>
 
           <div
             class="card"
-            style="background-image: url('./images/Group92.png')"
+            style="background-image: url('assets/courses/Group92.png')"
           >
             <div class="text1">
               05.02. | 16 уроків <br />
               усього місць : 8
             </div>
             <div class="text2">{BACK-END}</div>
-            <!-- <img class="bg_image" src="./images/Group92.png" alt="">                     -->
           </div>
           <div
             class="card"
-            style="background-image: url('./images/Group93.png')"
+            style="background-image: url('assets/courses/Group93.png')"
           >
             <div class="text1">
               28.01. | 10 уроків <br />
               усього місць : 15
             </div>
             <div class="text2">{QUALITY ASSURANCE}</div>
-            <!-- <img class="bg_image" src="./images/Group93.png" alt=""> -->
           </div>
           <div
             class="card"
-            style="background-image: url('./images/Group94.png')"
+            style="background-image: url('assets/courses/Group94.png')"
           >
             <div class="text1">
               06.02. | 22 уроків <br />
               усього місць : 5
             </div>
             <div class="text2">{MACHINE LEARNING}</div>
-            <!-- <img class="bg_image" src="./images/Group94.png" alt=""> -->
           </div>
-          <div class="card" style="background-image: url('./images/Group.png')">
+          <div class="card" style="background-image: url('assets/courses/Group.png')">
             <div class="text1">
               28.01. | 18 уроків <br />
               усього місць : 3
             </div>
             <div class="text2">{BACK-END ADVANCED}</div>
-            <!-- <img class="bg_image" src="./images/Group.png" alt=""> -->
           </div>
         </div>
 
@@ -468,7 +488,7 @@
         </div>
 
     </div>
-
+    
 
     </div>
   </body>
